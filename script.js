@@ -5,6 +5,22 @@
 var yearEl = document.getElementById("year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+// Mobile nav toggle
+var navToggle = document.getElementById("navToggle");
+var navLinks = document.getElementById("navLinks");
+if (navToggle && navLinks) {
+navToggle.addEventListener("click", function () {
+var isOpen = navLinks.classList.toggle("open");
+navToggle.setAttribute("aria-expanded", String(isOpen));
+});
+navLinks.querySelectorAll("a").forEach(function (link) {
+link.addEventListener("click", function () {
+navLinks.classList.remove("open");
+navToggle.setAttribute("aria-expanded", "false");
+});
+});
+}
+
 // Reveal on scroll
 var revealEls = document.querySelectorAll(".reveal");
 if ("IntersectionObserver" in window) {
