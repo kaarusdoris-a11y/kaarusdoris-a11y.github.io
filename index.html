@@ -12,22 +12,21 @@
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header" id="top">
-    <div class="container nav">
-      <a class="logo" href="#top">Doris Kaarus</a>
-    </div>
+        <nav class="container nav" aria-label="Primary">
+            <a class="logo" href="#top" aria-label="Doris Kaarus home">Doris Kaarus</a>
+    </nav>
   </header>
 
   <main id="main">
 
-    <section id="home" class="hero">
+    <section id="home" class="hero" aria-labelledby="hero-title">
       <div class="container hero-inner">
-        <p class="hero-kicker reveal">Data Analyst</p>
-        <h1 class="reveal">Hi, I'm <span class="accent">Doris Kaarus</span>.</h1>
+        <h1 id="hero-title" class="reveal">Hi, I'm <span class="accent">Doris</span>.</h1>
+        <p class="hero-tagline reveal">Data Analyst | SQL | Python | Power BI</p>
         <p class="hero-lede reveal">
-          I turn messy spreadsheets into decisions people can actually act on, using SQL, Python,
-        and a soft spot for a well-designed dashboard. Right now I'm deep into customer and
-          marketing analytics: who's about to leave, who's worth the extra attention, and what
-        the data says to do about it.
+          I enjoy turning messy spreadsheets into insights using SQL, Python, and data
+          visualization. Right now I'm building my skills in customer and marketing analytics:
+          who's about to leave, who's worth the extra attention, and what the data says to do about it.
         </p>
         <div class="hero-actions reveal">
           <a class="btn btn-primary" href="#contact">Get in touch</a>
@@ -41,7 +40,7 @@
 <footer class="site-footer">
     <div class="container footer-inner">
       <p>&copy; <span id="year"></span> Doris Kaarus</p>
-      <a href="#top">Back to top</a>
+            <a href="#top" aria-label="Back to top">Back to top</a>
   </div>
 </footer>
 
