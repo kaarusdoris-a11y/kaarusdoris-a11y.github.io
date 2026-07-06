@@ -175,3 +175,72 @@ a { color: inherit; }
 @media (max-width: 720px) {
   .hero { padding: 80px 0 60px; }
 }
+
+
+/* ============ Navigation ============ */
+.nav {
+  justify-content: space-between;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  transition: background var(--transition), color var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+}
+
+@media (max-width: 720px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 12px 24px 20px;
+    display: none;
+    gap: 2px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
