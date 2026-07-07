@@ -1,0 +1,187 @@
+/* ============ Design tokens ============ */
+:root {
+    --bg: #ffffff;
+    --bg-alt: #f5f7fa;
+    --text: #10233f;
+  --text-muted: #4b5b73;
+  --accent: #2563eb;
+  --accent-soft: #e8efff;
+      --border: #e4e9f0;
+      --card-bg: #ffffff;
+      --shadow: 0 1px 2px rgba(16, 35, 63, 0.04), 0 8px 24px rgba(16, 35, 63, 0.06);
+  --radius: 16px;
+  --radius-sm: 10px;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
+    --max-width: 1200px;
+  --transition: 0.25s ease;
+}
+
+* { box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+body {
+    margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a { color: inherit; }
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-120%);
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 0 0 8px 0;
+  z-index: 200;
+  transition: transform var(--transition);
+}
+.skip-link:focus { transform: translateY(0); }
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ============ Header ============ */
+.site-header {
+    position: sticky;
+  top: 0;
+  z-index: 100;
+    background: rgba(255, 255, 255, 0.88);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+    max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+/* ============ Hero ============ */
+.hero {
+    padding: 110px 0 90px;
+  text-align: center;
+  background:
+      radial-gradient(60% 60% at 50% 0%, var(--accent-soft), transparent 70%);
+}
+
+.hero-tagline {
+    text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+  margin: 0 0 20px;
+  letter-spacing: -0.02em;
+}
+
+.accent { color: var(--accent); }
+
+.hero-lede {
+  max-width: 620px;
+  margin: 0 auto 32px;
+  color: var(--text-muted);
+  font-size: 1.15rem;
+}
+
+.hero-actions {
+    display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+  padding: 12px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+    font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+    box-shadow: 0 8px 20px color-mix(in srgb, var(--accent) 35%, transparent);
+  }
+.btn-primary:hover { transform: translateY(-2px); }
+.btn-ghost {
+    background: var(--card-bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+.btn-ghost:hover { transform: translateY(-2px); border-color: var(--accent); }
+
+/* ============ Footer ============ */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+}
+.footer-inner {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--text-muted);
+    font-size: 0.85rem;
+}
+.footer-inner a { text-decoration: none; color: var(--text-muted); }
+  .footer-inner a:hover { color: var(--accent); }
+
+  /* ============ Reveal animation ============ */
+  .reveal {
+    opacity: 0;
+  transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.is-visible {
+      opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 720px) {
+  .hero { padding: 80px 0 60px; }
+}
