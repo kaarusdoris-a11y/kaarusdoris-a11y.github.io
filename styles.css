@@ -466,3 +466,64 @@ button:focus-visible {
 .project-link:hover {
   text-decoration: underline;
 }
+
+.blog {
+  padding: 96px 0;
+}
+
+.journal {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--border);
+  max-width: 680px;
+}
+
+.journal-entry {
+  position: relative;
+  padding: 0 0 32px 32px;
+}
+
+.journal-entry:last-child {
+  padding-bottom: 0;
+}
+
+.journal-entry::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+}
+
+.journal-week {
+  margin: 0 0 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+}
+
+.journal-entry p:not(.journal-week) {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.journal-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.journal-link:hover {
+  text-decoration: underline;
+}
