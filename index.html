@@ -132,6 +132,75 @@
       </div>
     </section>
 
+    <section id="projects" class="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="section-kicker reveal">Projects</p>
+        <h2 id="projects-title" class="section-title reveal">Selected work</h2>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <h3>Customer Segmentation with RFM Scoring</h3>
+            <p class="project-label">Business problem</p>
+            <p>UrbanStyle needed to know which customers to prioritize for retention, and which campaign to send to
+              whom, instead of treating every customer the same.</p>
+            <p class="project-label">What I did</p>
+            <p>Built an RFM (Recency, Frequency, Monetary) scoring model in pandas, segmenting the full customer base
+              into actionable groups.</p>
+            <p class="project-label">Result</p>
+            <p>Identified VIP customers, customers at risk of churning, and matched each segment to a specific campaign
+              recommendation.</p>
+            <a class="project-link"
+              href="https://github.com/kaarusdoris-a11y/DACA_portfolio/blob/main/week-7-python-pandas-rfm/README.md">Read
+              the write-up &rarr;</a>
+          </article>
+          <article class="project-card reveal">
+            <h3>Automated Sales Data Pipeline</h3>
+            <p class="project-label">Business problem</p>
+            <p>Refreshing the sales analysis by hand every time new data landed in Supabase was slow and error-prone.
+            </p>
+            <p class="project-label">What I did</p>
+            <p>Built a Python ETL pipeline: extract from the Supabase API with pagination, transform and score with
+              pandas, and export to CSV and an interactive Plotly dashboard.</p>
+            <p class="project-label">Result</p>
+            <p>A repeatable, one-command refresh that replaced hours of manual copy-pasting and cut down on human error.
+            </p>
+            <a class="project-link"
+              href="https://github.com/kaarusdoris-a11y/DACA_portfolio/blob/main/week-8-python-apis-pipeline/README.md">Read
+              the write-up &rarr;</a>
+          </article>
+          <article class="project-card reveal">
+            <h3>Sales Data Cleaning &amp; Audit</h3>
+            <p class="project-label">Business problem</p>
+            <p>Messy product data, duplicates, null values, inconsistent formatting, was blocking any reliable analysis
+              downstream.</p>
+            <p class="project-label">What I did</p>
+            <p>Audited and cleaned the 362-row products table in SQL: standardized formats, resolved duplicates, and
+              handled nulls (including 18 in the eco_certified column).</p>
+            <p class="project-label">Result</p>
+            <p>A clean, trustworthy dataset that the rest of the programme's analysis, including the RFM model, could be
+              built on.</p>
+            <a class="project-link"
+              href="https://github.com/kaarusdoris-a11y/DACA_portfolio/blob/main/week-2-sql-cleaning/README.md">Read the
+              write-up &rarr;</a>
+          </article>
+          <article class="project-card reveal">
+            <h3>Sales Dashboard &amp; Data Storytelling</h3>
+            <p class="project-label">Business problem</p>
+            <p>Stakeholders needed a way to see sales trends themselves, without waiting on a new report for every
+              question.</p>
+            <p class="project-label">What I did</p>
+            <p>Designed a Plotly/Streamlit dashboard with annotations and a narrative structure aimed at a non-technical
+              audience.</p>
+            <p class="project-label">Result</p>
+            <p>A self-serve dashboard stakeholders could explore directly, cutting down on ad hoc reporting requests.
+            </p>
+            <a class="project-link"
+              href="https://github.com/kaarusdoris-a11y/DACA_portfolio/blob/main/week-5-visualization-design/README.md">Read
+              the write-up &rarr;</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
