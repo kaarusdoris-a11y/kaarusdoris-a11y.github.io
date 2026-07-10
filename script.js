@@ -41,30 +41,28 @@ revealEls.forEach(function (el) { el.classList.add("is-visible"); });
 }
 })();
 // Theme toggle
-  var themeToggle = document.getElementById("themeToggle");
-    var root = document.documentElement;
-      function setTheme(theme) {
-        if (theme === "dark") {
-          root.setAttribute("data-theme", "dark");
-            } else {
-              root.removeAttribute("data-theme");
-                }
-                  try {
-                    localStorage.setItem("theme", theme);
-                      } catch (e) {}
-                        if (themeToggle) {
-                          themeToggle.textContent = theme === "dark" ? "Light" : "Dark";
-                            themeToggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
-                              }
-                                }
-                                  if (themeToggle) {
-                                    var isDark = root.getAttribute("data-theme") === "dark";
-                                      themeToggle.textContent = isDark ? "Light" : "Dark";
-                                        themeToggle.setAttribute("aria-pressed", isDark ? "true" : "false");
-                                          themeToggle.addEventListener("click", function () {
-                                            var currentlyDark = root.getAttribute("data-theme") === "dark";
-                                              setTheme(currentlyDark ? "light" : "dark");
-                                                });
-                                                  }
-
-                                                  
+var themeToggle = document.getElementById("themeToggle");
+var root = document.documentElement;
+function setTheme(theme) {
+  if (theme === "dark") {
+    root.setAttribute("data-theme", "dark");
+  } else {
+    root.removeAttribute("data-theme");
+  }
+  try {
+    localStorage.setItem("theme", theme);
+  } catch (e) {}
+  if (themeToggle) {
+    themeToggle.textContent = theme === "dark" ? "Light" : "Dark";
+    themeToggle.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+  }
+}
+if (themeToggle) {
+  var isDark = root.getAttribute("data-theme") === "dark";
+  themeToggle.textContent = isDark ? "Light" : "Dark";
+  themeToggle.setAttribute("aria-pressed", isDark ? "true" : "false");
+  themeToggle.addEventListener("click", function () {
+    var currentlyDark = root.getAttribute("data-theme") === "dark";
+    setTheme(currentlyDark ? "light" : "dark");
+  });
+}
