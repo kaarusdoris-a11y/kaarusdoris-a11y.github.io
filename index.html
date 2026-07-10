@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>(function () { try { var t = localStorage.getItem("theme"); if (!t) { t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } if (t === "dark") document.documentElement.setAttribute("data-theme", "dark"); } catch (e) { } })();</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -20,6 +21,7 @@
   <header class="site-header" id="top">
     <nav class="container nav" aria-label="Primary">
       <a class="logo" href="#top" aria-label="Doris Kaarus home">Doris Kaarus</a>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-pressed="false">Dark</button>
       <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
